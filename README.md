@@ -2,6 +2,19 @@
 ##ifstat是什么
 ifstat是一个查看网口统计数据的工具，类似于iostat与vmstat。可以用于查看一段时间的网口收发数据的统计信息。
 目前Android系统中并没有集成该工具，所以将其移植到Android系统，添加编译脚本，解决编译问题。
+##ifstat的编译
+###android
+Android系统下面可以直接运行mm进行编译
+###Linux
+Linux系统下面提供了CMAKE编译脚本，编译方式如下：
+```
+[david@ifstat4android]$ mkdir out
+[david@ifstat4android]$ cd out
+[david@out]$ cmake ..
+[david@out]$ make
+
+```
+或者直接运行build.sh进行编译。
 ##ifstat怎么用
 可以在Linux下行通过'man ifstat'查看ifstat的帮助文档。
 ```
