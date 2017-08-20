@@ -1,4 +1,4 @@
-# ifstat4android
+# ifstat_4_android
 ## ifstat是什么
 ifstat是一个查看网口统计数据的工具，类似于iostat与vmstat。可以用于查看一段时间的网口收发数据的统计信息。
 目前Android系统中并没有集成该工具，所以将其移植到Android系统，添加编译脚本，解决编译问题。
