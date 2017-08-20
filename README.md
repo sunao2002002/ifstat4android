@@ -1,11 +1,11 @@
 # ifstat4android
-##ifstat是什么
+## ifstat是什么
 ifstat是一个查看网口统计数据的工具，类似于iostat与vmstat。可以用于查看一段时间的网口收发数据的统计信息。
 目前Android系统中并没有集成该工具，所以将其移植到Android系统，添加编译脚本，解决编译问题。
-##ifstat的编译
-###android
+## ifstat的编译
+### android
 Android系统下面可以直接运行mm进行编译
-###Linux
+### Linux
 Linux系统下面提供了CMAKE编译脚本，编译方式如下：
 ```
 [david@ifstat4android]$ mkdir out
@@ -15,7 +15,7 @@ Linux系统下面提供了CMAKE编译脚本，编译方式如下：
 
 ```
 或者直接运行build.sh进行编译。
-##ifstat怎么用
+## ifstat怎么用
 可以在Linux下行通过'man ifstat'查看ifstat的帮助文档。
 ```
 usage: ifstat [-a] [-l] [-z] [-n] [-v] [-h] [-t] [-i if0,if1,...]
@@ -41,7 +41,7 @@ ifstat有很多选项，常用选项的含义如下：
 delay:数据更新的时间间隔，单位为秒，默认为1秒。如果需要指定小于1秒的间隔，可以用小数，如0.1秒
 count：数据更新的次数，如未制定，默认为无限次。
 ```
-##应用举例
+## 应用举例
 ```
 #ifstat -a -n -t -T 1 5
 Time            lo                 eth0               Total       
@@ -54,8 +54,13 @@ HH:MM:SS   KB/s in  KB/s out   KB/s in  KB/s out   KB/s in  KB/s out
 
 ```
 -a：打印所有网卡，包括回环lo
+
 -n：不周期性打印表头
+
 -T：增加Total列，统计所有网卡带宽之和
+
 -t：增加时间戳
+
 1：间隔1S
+
 5：打印5次
